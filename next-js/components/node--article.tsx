@@ -1,15 +1,20 @@
 import Image from "next/image"
 import { DrupalNode } from "next-drupal"
-
+import { NextRouter, useRouter } from "next/router"
 import { absoluteUrl, formatDate } from "lib/utils"
+
 
 interface NodeArticleProps {
   node: DrupalNode
 }
 
 export function NodeArticle({ node, ...props }: NodeArticleProps) {
+
+  const router: NextRouter = useRouter()
+
   return (
     <article {...props}>
+      <button type="button" onClick={() => router.back()}>Back to blog</button>
       <h1 className="mb-4 text-6xl font-black leading-tight">{node.title}</h1>
       <div className="mb-4 text-gray-600">
         {node.uid?.display_name ? (
@@ -39,7 +44,7 @@ export function NodeArticle({ node, ...props }: NodeArticleProps) {
       {node.body?.processed && (
         <div
           dangerouslySetInnerHTML={{ __html: node.body?.processed }}
-          className="mt-6 font-serif text-xl leading-loose prose"
+          className="mt-6 font-serif text-xl leading-loose "
         />
       )}
     </article>
