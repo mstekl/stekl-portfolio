@@ -2,6 +2,7 @@ import Image from "next/image"
 import { DrupalNode } from "next-drupal"
 import { NextRouter, useRouter } from "next/router"
 import { absoluteUrl, formatDate } from "lib/utils"
+import { Body } from "./body"
 
 
 interface NodeArticleProps {
@@ -13,7 +14,7 @@ export function NodeArticle({ node, ...props }: NodeArticleProps) {
   const router: NextRouter = useRouter()
 
   return (
-    <article {...props}>
+    <article className="container max-w-4xl py-24" {...props}>
       <button type="button" onClick={() => router.back()}>Back to blog</button>
       <h1 className="mb-4 text-6xl font-black leading-tight">{node.title}</h1>
       <div className="mb-4 text-gray-600">
@@ -42,10 +43,12 @@ export function NodeArticle({ node, ...props }: NodeArticleProps) {
         </figure>
       )}
       {node.body?.processed && (
+        
         <div
-          dangerouslySetInnerHTML={{ __html: node.body?.processed }}
-          className="mt-6 font-serif text-xl leading-loose "
-        />
+          className="mt-6 font-serif text-xl leading-loose ">
+            <Body value={node.body.processed} />
+          </div>
+        
       )}
     </article>
   )

@@ -14,15 +14,14 @@ export default function IndexPage({ nodes }: IndexPageProps) {
   return (
     <Layout>
       <Head>
-        <title>Mauricio Stekl personal site</title>
+        <title>Contact me</title>
         <meta
           name="description"
           content="Hi. This is my personal website"
         />
       </Head>
-      <div key="home" className="flex justify-center items-center">
-        <p className="text-center">Hi, I'm <strong>Mauricio Stekl</strong>.<br />
-        I'm a full-stack web developer.</p>
+      <div  className="flex justify-center items-center">
+        contact me
       </div>
     </Layout>
   )
