@@ -6,12 +6,13 @@ import { useEffect, useState } from "react"
 import Header from "./header"
 import { motion } from "framer-motion"
 import { useRouter } from "next/router"
+import { DrupalMenuLinkContent } from "next-drupal"
 
 export function Layout({ children }) {
   const router = useRouter();
 
   
-  const [menuItems, setMenuItems] = useState([]);
+  const [menuItems, setMenuItems] = useState<{menu: DrupalMenuLinkContent[]; items: DrupalMenuLinkContent[]}>({menu: [], items: []});
 
   useEffect(() => {
     async function fetchMenu() {
@@ -39,7 +40,7 @@ export function Layout({ children }) {
             type: "twin",
             ease: "easeOut"
           }}
-          className="flex flex-1 justify-center h-full "
+          className="flex flex-1 justify-center h-full w-screen"
           onAnimationComplete={ () => {document.body.style.overflow = 'auto';} }
           onAnimationStart={ () => {document.body.style.overflow = 'hidden';} }
         >

@@ -21,8 +21,8 @@ export default function IndexPage({ nodes }: IndexPageProps) {
         />
       </Head>
       <div key="home" className="flex justify-center items-center">
-        <p className="text-center">Hi, I'm <strong>Mauricio Stekl</strong>.<br />
-        I'm a full-stack web developer.</p>
+        <p className="text-center">Hi, I&apos;m <strong>Mauricio Stekl</strong>.<br />
+        I&apos;m a full-stack web developer.</p>
       </div>
     </Layout>
   )

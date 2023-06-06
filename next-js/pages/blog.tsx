@@ -14,7 +14,7 @@ export default function BlogPage({ nodes }: BlogPageProps) {
   return (
     <Layout>
       <Head>
-        <title>Mauricio Stekl's blog</title>
+        <title>Mauricio Stekl&apos;s blog</title>
         <meta
           name="description"
           content="Blog built with Next.js with Drupal for the backend."

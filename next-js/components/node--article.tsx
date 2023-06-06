@@ -14,7 +14,7 @@ export function NodeArticle({ node, ...props }: NodeArticleProps) {
   const router: NextRouter = useRouter()
 
   return (
-    <article className="container max-w-4xl py-24" {...props}>
+    <article className="container max-w-5xl py-24 px-4 md:px-0" {...props}>
       <button type="button" onClick={() => router.back()}>Back to blog</button>
       <h1 className="mb-4 text-6xl font-black leading-tight">{node.title}</h1>
       <div className="mb-4 text-gray-600">
@@ -45,7 +45,7 @@ export function NodeArticle({ node, ...props }: NodeArticleProps) {
       {node.body?.processed && (
         
         <div
-          className="mt-6 font-serif text-xl leading-loose ">
+          className="mt-6 font-serif text-xl leading-loose prose">
             <Body value={node.body.processed} />
           </div>
         

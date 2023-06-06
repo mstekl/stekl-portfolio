@@ -1,3 +1,6 @@
+/**
+ * grabbed the idea from https://codesandbox.io/s/yup2o
+ */
 import { Text, useGLTF, useScroll } from "@react-three/drei"
 import {  useFrame } from "@react-three/fiber"
 import { useMemo } from "react"
@@ -8,9 +11,8 @@ import { lerp } from "three/src/math/MathUtils"
 
 const SkillTerm = ( { children, ...props}) => {
 
-    // const color = new THREE.Color()
     const fontProps = {
-        font: '/fonts/Carme-Regular.ttf',
+        font: '/fonts/IBMPlexSans-Medium.ttf',
         fontSize: .25,
         letterSpacing: 0,
         lineHeight: 1, 
@@ -21,24 +23,23 @@ const SkillTerm = ( { children, ...props}) => {
 
 
     useFrame(({camera}) => {
-        // ref.current.quaternion.copy(camera.quaternion)
         ref.current.lookAt(camera.position)
     })
-    // ref.current.lookAt(0, 0, 0)
 
     return <Text color={"#999"} ref={ref} {...props} {...fontProps}>{children}</Text>
 
 }
 
 
-const SkillsCloud = (props) => {
+const SkillsCloud = ({skillsList, ...props} ) => {
+
+    
 
     const termsGroup = useRef()
+    
 
     const cloudTerms = useMemo(() => {
-        const skillsList = ["Drupal", "Wordpress", "Javascript", "PHP", "HTML", "CSS", "React", "three.js", "R3F", "jQuery", 
-                "Linux", "nginx", "Apache", "MySQL", "mongodb", "bash", "SASS", "Git", "Symfony", "Gatsby", "Jekyll", "Bootstrap", 
-                "SEO", ]
+        
 
         const terms = []
         const spherical = new THREE.Spherical()
@@ -52,7 +53,7 @@ const SkillsCloud = (props) => {
             }
         }
         return terms
-    })
+    }, skillsList)
    
     useFrame((f) => {
         const c = f.clock.getElapsedTime();

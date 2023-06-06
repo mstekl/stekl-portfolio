@@ -7,7 +7,7 @@ const options: HTMLReactParserOptions = {
     replace: (domNode) => {
       // Look for an img tag and replace it with Image.
       if (domNode instanceof Element && domNode.name === "img") {
-        console.log("NODE ATRIBS", domNode.attribs);
+        // console.log("NODE ATRIBS", domNode.attribs);
 
         const { src, alt } = domNode.attribs
   

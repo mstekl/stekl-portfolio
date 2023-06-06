@@ -1,3 +1,7 @@
+/**
+ * I took the particles ideas from https://codesandbox.io/s/sbf2i?file=/src/index.js:2502-2559
+ */
+
 import * as THREE from 'three'
 import React, { useRef, useMemo } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'

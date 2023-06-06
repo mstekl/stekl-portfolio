@@ -15,6 +15,12 @@ interface AboutPageProps {
 }
 
 export default function AboutPage({ aboutNode }: AboutPageProps) {
+
+  const skillsList = ["Drupal", "Wordpress", "Javascript", "PHP", "HTML", "CSS", "React", "three.js", "R3F", "jQuery", 
+  "Linux", "nginx", "Apache", "MySQL", "mongodb", "bash", "SASS", "Git", "Symfony", "Gatsby", "Jekyll", "Bootstrap", 
+  "SEO", ]
+
+
   
   const mouse = useRef([0, 0])
   return (
@@ -26,20 +32,22 @@ export default function AboutPage({ aboutNode }: AboutPageProps) {
           content="Hi. This is my personal website"
         />
       </Head>
-      <div key="about" className="flex flex-col justify-center items-center relative  overflow-hidden">
-        <div className="container z-10">
-          <div className="w-4/5 xl:w-3/5 2xl:w-2/5 p-16 items-center justify-center rounded-xl group  bg-slate-100  shadow-xl ">
-            <Body value={aboutNode.body.processed} />
+      <div key="about" className="flex flex-col justify-center items-center relative  overflow-hidden w-screen">
+        <div className="container z-10 px-4 md:px-0">
+          <div className="max-[450px]:w-full min-[451px]:w-4/5 xl:w-3/5 2xl:w-2/5 p-16 items-center justify-center rounded-xl group  bg-slate-100  shadow-xl ">
+            <article className="prose prose-slate lg:prose-xl ">
+              <Body value={aboutNode.body.processed} />
+            </article>
           </div>
         </div>
-        <div className="absolute top-0 left-1/4 w-full h-full">
+        <div className="absolute top-0 left-1/4 w-full h-full border">
           <Canvas
             shadows
             camera={{
               fov: 45,
               near: 0.1,
               far: 200,
-              position: [- 9, 10, 6]
+              position: [- 9, 8, 6]
             }}
           >
 
@@ -53,9 +61,9 @@ export default function AboutPage({ aboutNode }: AboutPageProps) {
   floatingRange={[-1, 1]} // Range of y-axis values the object will float within, defaults to [-0.1,0.1]
 >
 
-              <SkillsCloud />
+              <SkillsCloud  skillsList={skillsList} />
             
-              <Particles count={450} mouse={mouse} />
+              <Particles count={300} mouse={mouse} />
             </Float>
           </Canvas></div>
       </div>
