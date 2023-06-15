@@ -53,6 +53,10 @@ export async function getStaticProps(
     params = {
       include: "field_image,uid",
     }
+  }else if(type === 'node--page') {
+    params = {
+      include: "field_paragraphed_body,field_paragraphed_body.field_imagen"
+    }
   }
 
   const resource = await drupal.getResourceFromContext<DrupalNode>(

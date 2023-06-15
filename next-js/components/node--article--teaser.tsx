@@ -15,18 +15,19 @@ export function NodeArticleTeaser({ node, ...props }: NodeArticleTeaserProps) {
 
   return (
     <article {...props} 
-      className="rounded-2xl mb-16  transition-all hover:bg-gray-50 hover:-translate-y-1 hover:shadow-md group"
+      className="rounded-2xl mb-16  transition-all hover:bg-teal-600/10 hover:-translate-y-1 hover:shadow-md group"
       >
       <Link href={node.path.alias} className="no-underline flex flex-col md:flex-row relative ">
         <>
       <div>
       {node.field_image && (
-        <figure className=" h-full w-72 relative object-cover">
+        <figure className="w-full aspect-video md:w-72 md:aspect-square mx-auto relative">
           <Image
-            className="rounded-2xl border border-gray-200"
+            className="rounded-2xl border border-gray-200 object-cover"
             src={absoluteUrl(node.field_image.uri.url)}
             alt={node.field_image.resourceIdObjMeta.alt}
             fill={true}
+            sizes="100vw"
           />
         </figure>
       )}

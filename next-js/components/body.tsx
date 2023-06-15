@@ -28,6 +28,7 @@ const options: HTMLReactParserOptions = {
                         fill={true}
                         className="object-contain"
                         alt={alt}
+                        sizes="100vw"
                 /></div>
       }
     },

@@ -40,7 +40,7 @@ export function Layout({ children }) {
             type: "twin",
             ease: "easeOut"
           }}
-          className="flex flex-1 justify-center h-full w-screen"
+          className="flex flex-1 justify-center h-full w-screen transform-gpu"
           onAnimationComplete={ () => {document.body.style.overflow = 'auto';} }
           onAnimationStart={ () => {document.body.style.overflow = 'hidden';} }
         >

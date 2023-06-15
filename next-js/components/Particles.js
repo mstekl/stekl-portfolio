@@ -58,7 +58,7 @@ export default function Particles({ count, mouse }) {
     <>
       <instancedMesh ref={mesh} args={[null, null, count]}>
         <dodecahedronGeometry args={[0.1, 0]} />
-        <meshBasicMaterial color="rgb(100, 116, 139)" />
+        <meshBasicMaterial color="#115e59" />
       </instancedMesh>
     </>
   )

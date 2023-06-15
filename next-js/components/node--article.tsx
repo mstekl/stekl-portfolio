@@ -16,7 +16,7 @@ export function NodeArticle({ node, ...props }: NodeArticleProps) {
   return (
     <article className="container max-w-5xl py-24 px-4 md:px-0" {...props}>
       <button type="button" onClick={() => router.back()}>Back to blog</button>
-      <h1 className="mb-4 text-6xl font-black leading-tight">{node.title}</h1>
+      <h1 className="mb-4 text-6xl font-black leading-tight text-teal-950">{node.title}</h1>
       <div className="mb-4 text-gray-600">
         {node.uid?.display_name ? (
           <span>

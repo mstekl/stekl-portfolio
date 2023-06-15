@@ -21,32 +21,10 @@ export default function IndexPage({ nodes }: IndexPageProps) {
         />
       </Head>
       <div key="home" className="flex justify-center items-center">
-        <p className="text-center">Hi, I&apos;m <strong>Mauricio Stekl</strong>.<br />
-        I&apos;m a full-stack web developer.</p>
+        <p className="text-center">Hi, I&apos;m <strong>Mauricio Stekl</strong>,<br />
+        <span className="italic">a full-stack web developer, photographer, father, vintage enthusiast.</span></p>
       </div>
     </Layout>
   )
 }
 
-// export async function getStaticProps(
-//   context
-// ): Promise<GetStaticPropsResult<IndexPageProps>> {
-//   const nodes = await drupal.getResourceCollectionFromContext<DrupalNode[]>(
-//     "node--article",
-//     context,
-//     {
-//       params: {
-//         "filter[status]": 1,
-//         "fields[node--article]": "title,path,field_image,uid,created",
-//         include: "field_image,uid",
-//         sort: "-created",
-//       },
-//     }
-//   )
-
-//   return {
-//     props: {
-//       nodes,
-//     },
-//   }
-// }
