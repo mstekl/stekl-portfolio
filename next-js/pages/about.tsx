@@ -43,7 +43,7 @@ export default function AboutPage({ aboutNode }: AboutPageProps) {
           </div>
         </div>
 
-        <div className="absolute top-0 left-1/4 w-full h-full ">
+        <div className="absolute top-0 left-[10%] w-full h-full ">
           <Canvas
             shadows
             camera={{
