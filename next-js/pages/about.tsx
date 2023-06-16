@@ -35,15 +35,19 @@ export default function AboutPage({ aboutNode }: AboutPageProps) {
 
       <div key="about" className="flex flex-col justify-center items-center relative  overflow-hidden w-screen">
         
-        <div className="container z-10 px-4 md:px-0 ">
-          <div className="max-[450px]:w-full min-[451px]:w-4/5 xl:w-3/5 2xl:w-2/5 p-16 items-center justify-center rounded-xl group  bg-slate-100  shadow-xl ">
-            <article className="prose prose-slate lg:prose-xl  ">
+        <div className="container z-10 px-4 pt-32 md:pt-0">
+          <div className="
+              py-8 p-6 md:p-16 items-center justify-center rounded-xl group  bg-slate-100  shadow-xl
+              max-[650px]:w-full min-[651px]:w-3/5 xl:w-3/5 2xl:w-1/2  
+              
+              ">
+            <article className="prose prose-slate xl:prose-xl  ">
               <Body value={aboutNode.body.processed} />
             </article>
           </div>
         </div>
 
-        <div className="absolute top-0 left-[10%] w-full h-full ">
+        <div className="absolute -top-1/2 left-0 sm:-top-[15%] md:left-[20%] w-full h-full ">
           <Canvas
             shadows
             camera={{

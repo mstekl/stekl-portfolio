@@ -2,6 +2,7 @@ import { absoluteUrl } from "lib/utils";
 import { DrupalNode } from "next-drupal"
 import Image from "next/image";
 import { Body } from "./body"
+import { H1Title } from "./h1Title";
 
 interface NodeBasicPageProps {
   node: DrupalNode
@@ -10,7 +11,7 @@ interface NodeBasicPageProps {
 export function NodeBasicPage({ node, ...props }: NodeBasicPageProps) {
   return (
     <article className="container max-w-5xl py-24 px-4 md:px-0" {...props}>
-      <h1 className="mb-4 text-6xl font-black leading-tight text-teal-950">{node.title}</h1>
+      <H1Title>{node.title}</H1Title>
       {node.body?.processed && (
         <div
           className="mt-6 text-xl max-w-none prose lg:prose-xl">

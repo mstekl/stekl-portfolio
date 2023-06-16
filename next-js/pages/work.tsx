@@ -12,6 +12,7 @@ import { Float, Stage } from "@react-three/drei"
 import Image from "next/image"
 import { absoluteUrl } from "lib/utils"
 import { WorkCard } from "components/workCard"
+import { H1Title } from "components/h1Title"
 
 interface WorkPageProps {
   aboutNode: DrupalNode
@@ -31,7 +32,8 @@ export default function WorkPage({ aboutNode }: WorkPageProps) {
       <article key="work" className="py-16 container px-4 lg:px-0">
       
         <div className="container max-w-5xl ">
-          <h1 className="mb-4 text-6xl font-black leading-tight text-teal-950">{aboutNode.title}</h1>
+
+          <H1Title>{aboutNode.title}</H1Title>
           {aboutNode.body?.processed && (
             <div
               className="mt-6 text-xl max-w-none prose lg:prose-xl">

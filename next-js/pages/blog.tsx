@@ -5,6 +5,7 @@ import { DrupalNode } from "next-drupal"
 import { drupal } from "lib/drupal"
 import { Layout } from "components/layout"
 import { NodeArticleTeaser } from "components/node--article--teaser"
+import { H1Title } from "components/h1Title"
 
 interface BlogPageProps {
   nodes: DrupalNode[]
@@ -21,11 +22,10 @@ export default function BlogPage({ nodes }: BlogPageProps) {
         />
       </Head>
       <div className="px-8 py-16 container max-w-5xl ">
-        <h1 className="mb-10 text-4xl text-center font-black text-teal-950">My blog</h1>
-        <p className="text-gray-500 text-center">Blog is using Drupal for the backend. I will try to write mostly content in Spanish, 
+        <H1Title>My Blog</H1Title>
+        <p className="text-gray-500 text-center mb-20">Blog is using Drupal for the backend. I will try to write mostly content in Spanish, 
         since internet is already full of high quality technical content in English, and not so much in my original language.</p>
-        <hr className="my-20" />
-
+        
         {nodes?.length ? (
           nodes.map((node) => (
             <div key={node.id}>
