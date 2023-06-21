@@ -18,7 +18,7 @@ export default function AboutPage({ aboutNode }: AboutPageProps) {
 
   const skillsList = ["Next.js", "Drupal", "Wordpress", "Javascript", "PHP", "HTML", "CSS", "React", "Three.js", "R3F", "jQuery", 
   "Linux", "Nginx", "Apache", "MySQL", "MongoDB", "Bash", "SASS", "Git", "Symfony", "Gatsby", "Jekyll", "Bootstrap", 
-  "SEO", "TailwindCSS"]
+  "SEO", "TailwindCSS"] /** refactor this. needs to fetched from Drupal taxonomy or something  */
 
 
   
@@ -39,7 +39,6 @@ export default function AboutPage({ aboutNode }: AboutPageProps) {
           <div className="
               py-8 p-6 md:p-16 items-center justify-center rounded-xl group  bg-slate-100  shadow-xl
               max-[650px]:w-full min-[651px]:w-3/5 xl:w-3/5 2xl:w-1/2  
-              
               ">
             <article className="prose prose-slate xl:prose-xl  ">
               <Body value={aboutNode.body.processed} />
@@ -57,9 +56,7 @@ export default function AboutPage({ aboutNode }: AboutPageProps) {
               position: [- 9, 8, 6]
             }}
           >
-
             <ambientLight />
-
             <Float
                   speed={1} 
                   rotationIntensity={1} 

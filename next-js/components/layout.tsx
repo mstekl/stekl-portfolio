@@ -8,6 +8,10 @@ import { motion } from "framer-motion"
 import { useRouter } from "next/router"
 import { DrupalMenuLinkContent } from "next-drupal"
 
+import { Inter } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'] })
+
 export function Layout({ children }) {
   const router = useRouter();
 
@@ -28,7 +32,7 @@ export function Layout({ children }) {
   return (
     <>
       <PreviewAlert />
-      <div className="flex flex-col min-h-screen text-gray-900">
+      <div className={`${inter.className} flex flex-col min-h-screen text-gray-900`}>
         
         <Header menuItems={menuItems} />
         
@@ -40,7 +44,7 @@ export function Layout({ children }) {
             type: "twin",
             ease: "easeOut"
           }}
-          className="flex flex-1 justify-center h-full w-screen transform-gpu z-30"
+          className={`flex flex-1 justify-center h-full w-screen transform-gpu z-30 `}            
           onAnimationComplete={ () => {document.body.style.overflow = 'auto';} }
           onAnimationStart={ () => {document.body.style.overflow = 'hidden';} }
         >

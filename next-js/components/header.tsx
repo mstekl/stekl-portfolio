@@ -19,7 +19,7 @@ const Header = ({menuItems}) => {
 
     return (
         <header  className="bg-stone-50 sticky top-0 max-w-screen w-screen mx-auto drop-shadow-sm z-50">
-            <nav className="container flex items-center justify-between px-4 md:px-0 py-6 mx-auto relative">
+            <nav className="container flex items-center justify-between px-4  py-6 mx-auto relative">
                 <Link href="/" className=" text-4xl font-black text-teal-800 no-underline hover:text-teal-950 transition-colors ease-out duration-500">
                     MS
                 </Link>

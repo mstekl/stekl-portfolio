@@ -17,11 +17,11 @@ export function WorkCard({ work, ...props }: WorkParapgraphsNode) {
         <div 
             className="
             space-y-3 opacity-0 transition-all absolute z-50 
-            from-white/80 from-50% to-transparent bg-gradient-to-t inset-x-0 -bottom-2 pb-8 pt-16 px-8 flex items-end
+            from-white/90 from-50% to-transparent bg-gradient-to-b inset-x-0 top-0 pb-32 pt-8 px-8 flex items-end
             group-hover:opacity-100">
 
             <div className="text-teal-950">
-            <h2 className="text-teal-800 font-bold text-2xl text-shad drop-shadow-xl ">{work.field_titulo}</h2>
+            <h2 className="text-teal-800 font-bold text-3xl text-shad drop-shadow-xl ">{work.field_titulo}</h2>
             <Body value={work.field_body.value} />
             </div>
         </div>                

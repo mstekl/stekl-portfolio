@@ -10,7 +10,7 @@ interface NodeBasicPageProps {
 
 export function NodeBasicPage({ node, ...props }: NodeBasicPageProps) {
   return (
-    <article className="container max-w-5xl py-24 px-4 md:px-0" {...props}>
+    <article className="container max-w-5xl py-24 px-4 " {...props}>
       <H1Title>{node.title}</H1Title>
       {node.body?.processed && (
         <div

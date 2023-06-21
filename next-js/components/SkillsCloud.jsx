@@ -12,7 +12,7 @@ import { lerp } from "three/src/math/MathUtils"
 const SkillTerm = ( { children, ...props}) => {
 
     const fontProps = {
-        font: '/fonts/IBMPlexSans-Medium.ttf',
+        font: '/fonts/IBMPlexSans-Medium.ttf', /** @todo: find a better font, please!! */
         fontSize: .25,
         letterSpacing: 0,
         lineHeight: 1, 

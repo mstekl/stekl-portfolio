@@ -15,7 +15,7 @@ export function NodeArticle({ node, ...props }: NodeArticleProps) {
   const router: NextRouter = useRouter()
 
   return (
-    <article className="container max-w-5xl py-24 px-4 md:px-0" {...props}>
+    <article className="container max-w-5xl py-24 px-4 " {...props}>
       <button type="button" className="mb-8 text-slate-500" onClick={() => router.back()}>&lt; Back to blog</button>
 
       <H1Title>{node.title}</H1Title>
